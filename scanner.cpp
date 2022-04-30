@@ -46,7 +46,6 @@ std::vector<Token> Scanner::scan(const std::string &filename)
             ++current_token.m_line;
             break;
 
-        case ' ':
         case '\r':
         case '\t':
             add_token(current_token, tokens);
