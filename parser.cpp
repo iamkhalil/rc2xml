@@ -82,7 +82,7 @@ std::optional<Token> Parser::expect_rparen()
 std::optional<Token> Parser::expect_keyword()
 {
     for (const auto &e : keywords) {
-        if (m_current_token->m_type == e.second) {
+        if (m_current_token->m_type == e.second || m_current_token->m_type == MODULE) {
             Token tok = *m_current_token;
             ++m_current_token;
             return tok;
