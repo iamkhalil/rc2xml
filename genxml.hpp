@@ -41,7 +41,7 @@ std::string text(const struct module_s &m);
 std::string widget_properties(token_t widget, const struct module_s &m);
 void process_module(const Module& mod, struct module_s &m);
 
-} // ui_namespace
+} // namespace ui_template
 
 class Generator {
 public:

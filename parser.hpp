@@ -8,7 +8,6 @@
 class Parser {
 public:
     Root parse(std::vector<Token> &tokens);
-    void print() const;
 private:
     Module parse_module();
     Statement parse_statement(bool *check_rec);
