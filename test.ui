@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+<class>tblafe.tbfafe</class>
+<widget class="QMainWindow" name="tblafe.tbfafe">
+<property name="geometry">
+<rect>
+<x>20</x>
+<y>20</y>
+<width>450</width>
+<height>114</height>
+</rect>
+</property>
+<property name="text">
+<string>tblafe</string>
+</property>
+<widget class="QWidget" name="centralwidget">
+<widget class="QLabel" name="tblafe.tbfafe.tbfafe.TA0">
+<property name="geometry">
+<rect>
+<x>6</x>
+<y>6</y>
+<width>100</width>
+<height>20</height>
+</rect>
+</property>
+<property name="text">
+<string>nom_c</string>
+</property>
+</widget>
+<widget class="QLineEdit" name="tblafe.tbfafe.tbfafe.nom">
+<property name="geometry">
+<rect>
+<x>108</x>
+<y>6</y>
+<width>28</width>
+<height>17</height>
+</rect>
+</property>
+</widget>
+<widget class="QLabel" name="tblafe.tbfafe.tbfafe.TA1">
+<property name="geometry">
+<rect>
+<x>6</x>
+<y>28</y>
+<width>100</width>
+<height>20</height>
+</rect>
+</property>
+<property name="text">
+<string>prenom_t</string>
+</property>
+</widget>
+<widget class="QLineEdit" name="tblafe.tbfafe.tbfafe.prenom">
+<property name="geometry">
+<rect>
+<x>108</x>
+<y>28</y>
+<width>28</width>
+<height>17</height>
+</rect>
+</property>
+</widget>
+<widget class="QPushButton" name="tblafe.tbfafe.tbfafe.pbut_bouton">
+<property name="geometry">
+<rect>
+<x>151</x>
+<y>71</y>
+<width>100</width>
+<height>20</height>
+</rect>
+</property>
+<property name="text">
+<string>bouton_c</string>
+</property>
+</widget>
+</widget>
+<widget class="QMenuBar" name="menubar"/>
+<widget class="QStatusBar" name="statusbar"/>
+</widget>
+<resources/>
+<connections/>
+</ui>

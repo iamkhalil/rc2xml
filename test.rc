@@ -1,6 +1,41 @@
-//      %W%  %E%
+//	%W%  %E%
 
 /// VERSION 9
+
+(RLib.Load
+	Name:	"apsys"
+	FileName:	"apsys.dat"
+)
+
+(RMod.Compile
+	Name:	"tblafe"
+	Lib:	"apsys"
+	Flags:	0x0008
+	Version:	9
+	Script:	NULL
+	ClientRes:	NULL
+	FileName:	"tblafe.rc"
+	CFileName:	NULL
+	HFileName:	NULL
+	UnixMake:	""
+	VmsMake:	""
+	MacMake:	""
+	PCMake:	""
+	RModFlags:	0x0000
+)
+
+(CItem.Compile
+	Name:	"tblafe.CItem1"
+	Flags:	0x0001
+	Version:	9
+	Script:	NULL
+	ClientRes:	NULL
+	Type:	0
+	Id:	1
+	Label:	"Choice"
+	GC:	"CItem.DefGC"
+	Command:	NULL
+)
 
 (Win.Compile
 	Name:	"tblafe.tbfafe"
@@ -155,4 +190,360 @@
 	VHLExtraMax:	4
 	RowIncrement:	0
 	NumElt:	0
+)
+
+(Palet.Compile
+	Name:	"tblafe.tbfafe.tbfafe.Palet1"
+	Flags:	0x0000
+	Version:	9
+	Script:	NULL
+	ClientRes:	NULL
+	FgColor:	"Wgt.DefFgColor"
+	BgColor:	"Panel.DefBgColor"
+	Font:	"Wgt.DefFont"
+	Pen:	"GUIdefs.PanelPen"
+	Pattern:	"Patt.Empty"
+	Cursor:	"Curs.DefArrow"
+	Help:	NULL
+	Index:	1
+	X:	0
+	Y:	0
+	W:	444
+	H:	54
+	ChrX:	0
+	ChrY:	0
+	ChrW:	0
+	ChrH:	0
+	RzFlags:	0x0000
+	WgtFlags:	0x0001
+	FocusFlags:	0x0001
+	ValidFlags:	0x0000
+	KeysNext:	"Panel.KeysNextWgt"
+	KeysPrev:	"Panel.KeysPrevWgt"
+	KeysNextInGrp:	"Panel.KeysNextRadio"
+	KeysPrevInGrp:	"Panel.KeysPrevRadio"
+	Label:	NULL
+	LabelJustif:	0x0000
+	HVFlags:	0x0000
+	HeadW:	0
+	HeadH:	0
+	HSepW:	0
+	HSepH:	0
+	SbSepW:	4
+	SbSepH:	4
+	StyleFlags:	0x0007
+	HLPen:	"Pen.2x2Solid"
+	HEltMin:	15
+	VEltMin:	15
+	HEltMax:	70
+	VEltMax:	70
+	HMarMin:	8
+	VMarMin:	8
+	HMarMax:	8
+	VMarMax:	8
+	HSepMin:	5
+	VSepMin:	5
+	HSepMax:	7
+	VSepMax:	7
+	HHLExtraMin:	3
+	VHLExtraMin:	3
+	HHLExtraMax:	4
+	VHLExtraMax:	4
+	RowIncrement:	0
+	NumElt:	0
+)
+
+(TArea.Compile
+	Name:	"tblafe.tbfafe.tbfafe.TA0"
+	Flags:	0x0000
+	Version:	9
+	Script:	NULL
+	ClientRes:	NULL
+	FgColor:	"TArea.DefFgColor"
+	BgColor:	"TArea.DefBgColor"
+	Font:	"GUIfonts.LabelFontBold"
+	Pen:	"Pen.Invisible"
+	Pattern:	"Patt.Empty"
+	Cursor:	"Curs.DefArrow"
+	Help:	NULL
+	Index:	2
+	X:	6
+	Y:	6
+	W:	100
+	H:	20
+	ChrX:	0
+	ChrY:	0
+	ChrW:	0
+	ChrH:	0
+	RzFlags:	0x0000
+	WgtFlags:	0x0001
+	FocusFlags:	0x0001
+	ValidFlags:	0x0000
+	Label:	"nom_c"
+	Justif:	0x0041
+)
+
+(AFTEd.Compile
+	Name:	"tblafe.tbfafe.tbfafe.nom"
+	Flags:	0x0000
+	Version:	9
+	Script:	NULL
+	ClientRes:	NULL
+	FgColor:	"FTEd.DefFgColor"
+	BgColor:	"GUIdefs.FldBgColor"
+	Font:	"GUIfonts.TedFont"
+	Pen:	"FTEd.DefPen"
+	Pattern:	"Patt.Empty"
+	Cursor:	"Curs.DefArrow"
+	Help:	NULL
+	Index:	3
+	X:	108
+	Y:	6
+	W:	28
+	H:	17
+	ChrX:	0
+	ChrY:	0
+	ChrW:	0
+	ChrH:	0
+	RzFlags:	0x0100
+	WgtFlags:	0x0009
+	FocusFlags:	0x0001
+	ValidFlags:	0x0002
+	KeysNext:	"Panel.KeysNextWgt"
+	KeysPrev:	"Panel.KeysPrevWgt"
+	KeysNextInGrp:	"Panel.KeysNextRadio"
+	KeysPrevInGrp:	"Panel.KeysPrevRadio"
+	Label:	NULL
+	LabelJustif:	0x0041
+	HVFlags:	0x0000
+	HeadW:	0
+	HeadH:	0
+	HSepW:	0
+	HSepH:	0
+	SbSepW:	4
+	SbSepH:	4
+	ValKeys:	NULL
+	MaxLen:	2
+	Justif:	0x0001
+	OptFlags:	0x0681
+	LeftMargin:	4
+	RightMargin:	4
+	Width:	0
+	LabelFont:	"TEd.DefFont"
+	LabelPen:	"Pen.Solid"
+	LabelPattern:	"Patt.Empty"
+	LabelFgColor:	"TEd.DefFgColor"
+	LabelBgColor:	"Color.Transparent"
+	InitialText:	"!!"
+	SpacesPerTab:	0
+	DisplayChar:	32
+	MaskStr:	"!!"
+	ApFormat:	11
+	KeyFld:	0x00000000
+	Protected:	0x00000001
+	PictureChoice:	6
+	CDataType:	2
+)
+
+(TArea.Compile
+	Name:	"tblafe.tbfafe.tbfafe.TA1"
+	Flags:	0x0000
+	Version:	9
+	Script:	NULL
+	ClientRes:	NULL
+	FgColor:	"TArea.DefFgColor"
+	BgColor:	"TArea.DefBgColor"
+	Font:	"GUIfonts.LabelFontBold"
+	Pen:	"Pen.Invisible"
+	Pattern:	"Patt.Empty"
+	Cursor:	"Curs.DefArrow"
+	Help:	NULL
+	Index:	4
+	X:	6
+	Y:	28
+	W:	100
+	H:	20
+	ChrX:	0
+	ChrY:	0
+	ChrW:	0
+	ChrH:	0
+	RzFlags:	0x0000
+	WgtFlags:	0x0001
+	FocusFlags:	0x0001
+	ValidFlags:	0x0000
+	Label:	"prenom_t"
+	Justif:	0x0041
+)
+
+(AFTEd.Compile
+	Name:	"tblafe.tbfafe.tbfafe.prenom"
+	Flags:	0x0000
+	Version:	9
+	Script:	NULL
+	ClientRes:	NULL
+	FgColor:	"FTEd.DefFgColor"
+	BgColor:	"GUIdefs.FldBgColor"
+	Font:	"GUIfonts.TedFont"
+	Pen:	"FTEd.DefPen"
+	Pattern:	"Patt.Empty"
+	Cursor:	"Curs.DefArrow"
+	Help:	NULL
+	Index:	5
+	X:	108
+	Y:	28
+	W:	28
+	H:	17
+	ChrX:	0
+	ChrY:	0
+	ChrW:	0
+	ChrH:	0
+	RzFlags:	0x0100
+	WgtFlags:	0x0009
+	FocusFlags:	0x0001
+	ValidFlags:	0x0002
+	KeysNext:	"Panel.KeysNextWgt"
+	KeysPrev:	"Panel.KeysPrevWgt"
+	KeysNextInGrp:	"Panel.KeysNextRadio"
+	KeysPrevInGrp:	"Panel.KeysPrevRadio"
+	Label:	NULL
+	LabelJustif:	0x0041
+	HVFlags:	0x0000
+	HeadW:	0
+	HeadH:	0
+	HSepW:	0
+	HSepH:	0
+	SbSepW:	4
+	SbSepH:	4
+	ValKeys:	NULL
+	MaxLen:	2
+	Justif:	0x0001
+	OptFlags:	0x0681
+	LeftMargin:	4
+	RightMargin:	4
+	Width:	0
+	LabelFont:	"TEd.DefFont"
+	LabelPen:	"Pen.Solid"
+	LabelPattern:	"Patt.Empty"
+	LabelFgColor:	"TEd.DefFgColor"
+	LabelBgColor:	"Color.Transparent"
+	InitialText:	"!!"
+	SpacesPerTab:	0
+	DisplayChar:	32
+	MaskStr:	"!!"
+	ApFormat:	11
+	KeyFld:	0x00000000
+	Protected:	0x00000001
+	PictureChoice:	6
+	CDataType:	2
+)
+
+(Palet.Compile
+	Name:	"tblafe.tbfafe.tbfafe.Palet3"
+	Flags:	0x0000
+	Version:	9
+	Script:	NULL
+	ClientRes:	NULL
+	FgColor:	"Wgt.DefFgColor"
+	BgColor:	"Panel.DefBgColor"
+	Font:	"Wgt.DefFont"
+	Pen:	"GUIdefs.PanelPen"
+	Pattern:	"Patt.Empty"
+	Cursor:	"Curs.DefArrow"
+	Help:	NULL
+	Index:	6
+	X:	0
+	Y:	56
+	W:	444
+	H:	52
+	ChrX:	0
+	ChrY:	0
+	ChrW:	0
+	ChrH:	0
+	RzFlags:	0x0000
+	WgtFlags:	0x0001
+	FocusFlags:	0x0001
+	ValidFlags:	0x0000
+	KeysNext:	"Panel.KeysNextWgt"
+	KeysPrev:	"Panel.KeysPrevWgt"
+	KeysNextInGrp:	"Panel.KeysNextRadio"
+	KeysPrevInGrp:	"Panel.KeysPrevRadio"
+	Label:	NULL
+	LabelJustif:	0x0000
+	HVFlags:	0x0000
+	HeadW:	0
+	HeadH:	0
+	HSepW:	0
+	HSepH:	0
+	SbSepW:	4
+	SbSepH:	4
+	StyleFlags:	0x0007
+	HLPen:	"Pen.2x2Solid"
+	HEltMin:	15
+	VEltMin:	15
+	HEltMax:	70
+	VEltMax:	70
+	HMarMin:	8
+	VMarMin:	8
+	HMarMax:	8
+	VMarMax:	8
+	HSepMin:	5
+	VSepMin:	5
+	HSepMax:	7
+	VSepMax:	7
+	HHLExtraMin:	3
+	VHLExtraMin:	3
+	HHLExtraMax:	4
+	VHLExtraMax:	4
+	RowIncrement:	0
+	NumElt:	0
+)
+
+(PBut.Compile
+	Name:	"tblafe.tbfafe.tbfafe.pbut_bouton"
+	Flags:	0x0000
+	Version:	9
+	Script:	NULL
+	ClientRes:	NULL
+	FgColor:	"TBut.DefFgColor"
+	BgColor:	"TBut.DefBgColor"
+	Font:	"GUIfonts.PushButtonFont"
+	Pen:	"TBut.DefPen"
+	Pattern:	"Patt.Empty"
+	Cursor:	"Curs.DefArrow"
+	Help:	NULL
+	Index:	7
+	X:	151
+	Y:	71
+	W:	100
+	H:	20
+	ChrX:	0
+	ChrY:	0
+	ChrW:	0
+	ChrH:	0
+	RzFlags:	0x0000
+	WgtFlags:	0x0001
+	FocusFlags:	0x0001
+	ValidFlags:	0x0000
+	Label:	"bouton_c"
+	Icon:	NULL
+	Mode:	0
+	Style:	0
+	IsDefault:	0
+)
+
+(CItem.Compile
+	Name:	"tblafe.tbfafetbfafeportafecc0"
+	Flags:	0x0001
+	Version:	9
+	Script:	NULL
+	ClientRes:	NULL
+	Type:	0
+	Id:	0
+	Label:	"Code Type"
+	GC:	"CItem.DefGC"
+	Command:	NULL
+)
+
+(RMod.Save
+	Name:	"tblafe"
 )

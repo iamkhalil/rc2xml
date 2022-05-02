@@ -24,6 +24,15 @@ function(enable_warnings target)
   target_compile_options(${target} PRIVATE ${WARNINGS})
 endfunction()
 
+include(FetchContent)
+
+FetchContent_Declare(fmt
+  GIT_REPOSITORY https://github.com/fmtlib/fmt.git
+  GIT_TAG master
+)
+
+FetchContent_MakeAvailable(fmt)
+
 add_library(internals
   token.hpp
   token.cpp
@@ -33,6 +42,13 @@ add_library(internals
   ast_printer.cpp
   parser.hpp
   parser.cpp
+  genxml.hpp
+  genxml.cpp
+)
+
+target_link_libraries(internals
+  PRIVATE
+  fmt::fmt
 )
 
 enable_warnings(internals)
