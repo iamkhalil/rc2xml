@@ -50,6 +50,11 @@ std::vector<Token> Scanner::scan(const std::string &filename)
         case '\t':
             add_token(current_token, tokens);
             break;
+        
+        case ' ':
+	        if (current_token.m_type == STRING)
+		        current_token.m_value.append(1, *itr);
+	        break;
 
         case '(':
             if (current_token.m_type == WHITESPACE) {
