@@ -36,9 +36,13 @@ std::vector<Token> Scanner::scan(const std::string &filename)
     for (auto itr = filename.begin(); itr != filename.end(); ++itr) {
         switch (*itr) {
         case '/':
-            while (*itr != '\n')
-                ++itr;
-            ++current_token.m_line;
+            if (current_token.m_type != STRING) {
+                while (*itr != '\n')
+                    ++itr;
+                ++current_token.m_line;
+            } else {
+                current_token.m_value.append(1, *itr);
+            }
             break;
 
         case '\n':
@@ -50,7 +54,7 @@ std::vector<Token> Scanner::scan(const std::string &filename)
         case '\t':
             add_token(current_token, tokens);
             break;
-        
+
         case ' ':
 	        if (current_token.m_type == STRING)
 		        current_token.m_value.append(1, *itr);

@@ -87,6 +87,10 @@ void process_module(const Module &mod, struct module_s &m)
             m.h = stmt.m_right.m_value;
         else if (stmt.m_left.m_value == "Label")
             m.label = stmt.m_right.m_value;
+        else if (stmt.m_left.m_value == "Font")
+            m.font = stmt.m_right.m_value;
+        else if (stmt.m_left.m_value == "InitialText")
+            m.initial_text = stmt.m_right.m_value;
     }
 }
 
@@ -102,9 +106,11 @@ std::string widget_properties(token_t widget, const struct module_s &m)
 
     case TAREA:
         s.append(text(m));
+        s.append(font(m));
         break;
 
     case AFTED:
+        s.append(placeholder(m));
         break;
 
     case PBUT:
@@ -137,6 +143,30 @@ std::string text(const struct module_s &m)
     return fmt::format(
         "<property name=\"text\">\n<string>{}</string>\n</property>\n",
         m.label);
+}
+
+std::string font(const struct module_s &m)
+{
+    return fmt::format(
+        "<property name=\"font\">\n"
+        "<font>\n"
+        "<family>Noto Sans</family>\n"
+        "<italic>false</italic>\n"
+        "<bold>{}</bold>\n"
+        "<underline>false</underline>\n"
+        "<strikeout>false</strikeout>\n"
+        "</font>\n"
+        "</property>\n",
+        (m.font == "GUIfonts.LabelFontBold" ? "true" : "false"));
+}
+
+std::string placeholder(const struct module_s &m)
+{
+    return fmt::format(
+        "<property name=\"placeholderText\">\n"
+        "<string>{}</string>\n"
+        "</property>\n",
+        m.initial_text);
 }
 
 std::string resources_model(void) { return "<resources/>"; }

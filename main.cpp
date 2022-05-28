@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
             exit(2);
         }
 
-        FILE *f = fopen(argv[1], "r");
+        FILE *f = fopen(argv[1], "rb");
         if (!f) {
             std::cerr << "Error: Can't find " << argv[1] << ".\n";
             exit(3);

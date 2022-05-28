@@ -14,6 +14,8 @@ struct module_s {
     std::string w;
     std::string h;
     std::string label;
+    std::string font;
+    std::string initial_text;
 };
 
 static const std::unordered_map<token_t, std::string> qt_widgets_classes = {
@@ -36,7 +38,8 @@ std::string status_bar_model(void);
 // widget properties
 std::string geometry(const struct module_s &m);
 std::string text(const struct module_s &m);
-//std::string font(const struct module_s &m);
+std::string font(const struct module_s &m);
+std::string placeholder(const struct module_s &m);
 
 std::string widget_properties(token_t widget, const struct module_s &m);
 void process_module(const Module& mod, struct module_s &m);

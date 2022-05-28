@@ -26,6 +26,15 @@
 <property name="text">
 <string>nom_c</string>
 </property>
+<property name="font">
+<font>
+<family>Noto Sans</family>
+<italic>false</italic>
+<bold>true</bold>
+<underline>false</underline>
+<strikeout>false</strikeout>
+</font>
+</property>
 </widget>
 <widget class="QLineEdit" name="tblafe.tbfafe.tbfafe.nom">
 <property name="geometry">
@@ -35,6 +44,9 @@
 <width>28</width>
 <height>17</height>
 </rect>
+</property>
+<property name="placeholderText">
+<string>!!</string>
 </property>
 </widget>
 <widget class="QLabel" name="tblafe.tbfafe.tbfafe.TA1">
@@ -49,6 +61,15 @@
 <property name="text">
 <string>prenom_t</string>
 </property>
+<property name="font">
+<font>
+<family>Noto Sans</family>
+<italic>false</italic>
+<bold>true</bold>
+<underline>false</underline>
+<strikeout>false</strikeout>
+</font>
+</property>
 </widget>
 <widget class="QLineEdit" name="tblafe.tbfafe.tbfafe.prenom">
 <property name="geometry">
@@ -58,6 +79,9 @@
 <width>28</width>
 <height>17</height>
 </rect>
+</property>
+<property name="placeholderText">
+<string>!!</string>
 </property>
 </widget>
 <widget class="QPushButton" name="tblafe.tbfafe.tbfafe.pbut_bouton">
