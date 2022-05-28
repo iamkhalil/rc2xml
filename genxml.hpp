@@ -5,7 +5,7 @@
 #include <string>
 #include <unordered_map>
 
-namespace ui_template {
+namespace Ui {
 
 struct module_s {
     std::string name;
@@ -16,12 +16,15 @@ struct module_s {
     std::string label;
     std::string font;
     std::string initial_text;
+    std::string is_default;
 };
 
 static const std::unordered_map<token_t, std::string> qt_widgets_classes = {
     {TAREA, "QLabel"},
     {AFTED, "QLineEdit"},
-    {PBUT, "QPushButton"}
+    {PBUT, "QPushButton"},
+    {CBOX, "QComboBox"},
+    {CBUT, "QCheckBox"}
 };
 
 // models
@@ -40,11 +43,12 @@ std::string geometry(const struct module_s &m);
 std::string text(const struct module_s &m);
 std::string font(const struct module_s &m);
 std::string placeholder(const struct module_s &m);
+std::string checked(const struct module_s &m);
 
 std::string widget_properties(token_t widget, const struct module_s &m);
 void process_module(const Module& mod, struct module_s &m);
 
-} // namespace ui_template
+} // namespace Ui
 
 class Generator {
 public:

@@ -25,7 +25,9 @@ typedef enum {
     PALET,
     TAREA,
     AFTED,
-    PBUT
+    PBUT,
+    CBOX,
+    CBUT
 
 } token_t;
 
@@ -45,7 +47,9 @@ static const char *token_types[] = {
     "PALET",
     "TAREA",
     "AFTED",
-    "PBUT"
+    "PBUT",
+    "CBOX",
+    "CBUT"
 };
 
 static const std::unordered_map<std::string, token_t> keywords = {
@@ -55,6 +59,8 @@ static const std::unordered_map<std::string, token_t> keywords = {
     {"TArea.Compile", TAREA},
     {"AFTEd.Compile", AFTED},
     {"PBut.Compile", PBUT},
+    {"CBox.Compile", CBOX},
+    {"CBut.Compile", CBUT},
     {"NULL", NIL}
 };
 

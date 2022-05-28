@@ -11,7 +11,7 @@ FILE *Generator::generate(std::string ui, const char *filename)
     return f;
 }
 
-namespace ui_template {
+namespace Ui {
 
 std::string base_model(const Root &ast, struct module_s &m)
 {
@@ -91,6 +91,8 @@ void process_module(const Module &mod, struct module_s &m)
             m.font = stmt.m_right.m_value;
         else if (stmt.m_left.m_value == "InitialText")
             m.initial_text = stmt.m_right.m_value;
+        else if (stmt.m_left.m_value == "IsDefault")
+            m.is_default= stmt.m_right.m_value;
     }
 }
 
@@ -115,6 +117,14 @@ std::string widget_properties(token_t widget, const struct module_s &m)
 
     case PBUT:
         s.append(text(m));
+        break;
+
+    case CBOX:
+        break;
+
+    case CBUT:
+        s.append(text(m));
+        s.append(font(m));
         break;
 
     default:
@@ -157,7 +167,7 @@ std::string font(const struct module_s &m)
         "<strikeout>false</strikeout>\n"
         "</font>\n"
         "</property>\n",
-        (m.font == "GUIfonts.LabelFontBold" ? "true" : "false"));
+        (m.font.rfind("Bold") != std::string::npos ? "true" : "false"));
 }
 
 std::string placeholder(const struct module_s &m)
@@ -167,6 +177,15 @@ std::string placeholder(const struct module_s &m)
         "<string>{}</string>\n"
         "</property>\n",
         m.initial_text);
+}
+
+std::string checked(const struct module_s &m)
+{
+    return fmt::format(
+        "<property name=\"checked\">\n"
+        "<bool>{}</bool>\n"
+        "</property>\n",
+        m.is_default == "0" ? "false" : "true");
 }
 
 std::string resources_model(void) { return "<resources/>"; }
@@ -183,4 +202,4 @@ std::string status_bar_model(void)
     return "<widget class=\"QStatusBar\" name=\"statusbar\"/>";
 }
 
-} // namespace ui_template
+} // namespace Ui

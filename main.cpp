@@ -56,16 +56,15 @@ int main(int argc, char *argv[])
         char *filename = std::strcat(tmp, ".ui");
 
         Generator genxml;
-        struct ui_template::module_s m;
+        struct Ui::module_s m;
 
-        std::string ui = ui_template::base_model(root, m);
+        std::string ui = Ui::base_model(root, m);
         f = genxml.generate(ui, filename);
         if (!f) {
             std::cerr << "Error: can't find " << filename << ".\n";
             exit(4);
         }
         fclose(f);
-
     } catch (const std::exception &e) {
         std::cerr << "Exception: " << e.what() << '\n';
         exit(42);
