@@ -50,10 +50,12 @@ int main(int argc, char *argv[])
         Root root = parser.parse(tokens);
         root.print();
 
-        char tmp[len - 3];
-        for (auto i = 0; i < len - 3; ++i)
-            tmp[i] = argv[1][i];
-        char *filename = std::strcat(tmp, ".ui");
+        char *filename = new char[len + 1];
+        size_t i;
+        for (i = 0; i < len - 3; ++i)
+            filename[i] = argv[1][i];
+        filename[i] = '\0';
+        filename = std::strcat(filename, ".ui");
 
         Generator genxml;
         struct Ui::module_s m;
@@ -64,6 +66,7 @@ int main(int argc, char *argv[])
             std::cerr << "Error: can't find " << filename << ".\n";
             exit(4);
         }
+        delete[] filename;
         fclose(f);
     } catch (const std::exception &e) {
         std::cerr << "Exception: " << e.what() << '\n';
