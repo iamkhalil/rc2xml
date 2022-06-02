@@ -38,14 +38,14 @@ $ ./rc2xml file.rc
 
 #### Example 1:
 
-**Before**
+**Before**\
 ![interface.rc](https://i.imgur.com/dn02FzS.png)
 
-**After**
+**After**\
 ![interface.ui](https://i.imgur.com/N8pahGj.png)
 
 #### Example 2:
-**Before**
+**Before**\
 ![test.rc](https://i.imgur.com/J20rGJX.png)
 
 **After**\
